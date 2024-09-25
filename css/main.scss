@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+
+$main-bg-color: #f7fcff;
+$secondary-bg-color: #427D9D;
+$accent-light-color: #9BBEC8;
+$main-font-color: #164863;
+$main-font-color-hover: #093349;
+$shaded-bg-color: #F2F2F2;
+$shaded-bg-color2: #cacaca;
+
+$main-font: "Lato", sans-serif;
+$secondary-font: "DM Serif Display", serif;
+
+
+
+html {
+    margin: 0;
+    scroll-behavior: auto;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $main-bg-color;
+    color: $main-font-color;
+    margin: 0;
+    font-family: $main-font;
+}
+
+h1 {
+    font-size: 26pt;
+    margin: 10px;
+}
+
+h1, h2, h3, h4, a {
+    font-family: $secondary-font;
+}
+
+.nav {
+    background-color: $main-bg-color;
+    color: $main-font-color;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav > div {
+    padding-left: 60px;
+    font-size: 24px;
+}
+
+.nav a {
+    color: $main-font-color;
+    text-decoration: none;
+
+}
+
+.nav a:hover {
+    color: $main-font-color-hover;
+    transition: all 200ms ease-in;
+}
+
+.jumbo {
+    height: 100vh;
+    width: 100%;
+    color: $main-bg-color;
+    background-image: url(../assets/images/bg3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+}
+
+.jumbo > section {
+    width: 90%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    
+    padding: 20px;
+}
+
+.slogan {
+    margin: 20px;
+    align-self: flex-start;
+    font-size: 24pt;
+    width: 40%;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    backdrop-filter: blur(20px) saturate(80%);
+}
+
+.slogan a {
+    color: $main-bg-color;
+
+}
+
+.niche {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end;
+    width: 50%;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.niche > article {
+    color: $main-font-color;
+    width: 40%;
+    height: auto;
+    padding: 20px;
+    text-align: center;
+    border-radius: 29px;
+    background: #f7fcff;
+    box-shadow: inset 13px 13px 26px #a5a9ab,
+                inset -13px -13px 26px #ffffff;
+}
+
+.niche a {
+    color: $main-font-color;
+    text-decoration: none;
+}
+
+.niche a:hover {
+    color: $main-font-color-hover;
+}
+
+.second {
+    align-self: flex-end;
+}
+
+.details {
+    margin: 10px;
+}
+
+.detailbox {
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.detailbox > div {
+    width: 40%;
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 29px;
+    background: linear-gradient(145deg, #ffffff, #dee3e6);
+    box-shadow:  13px 13px 26px #a5a9ab,
+                -13px -13px 26px #ffffff;
+    transition: all 200ms ease-in;
+}
+
+.detailbox > div:hover {
+    border-radius: 29px;
+    background: linear-gradient(145deg, #ffffff, #dee3e6);
+    box-shadow:  23px 23px 46px #a3a6a8,
+                -23px -23px 46px #ffffff;
+
+    transition: all 200ms ease-in;
+}
+
+.about {
+    background-color: $shaded-bg-color;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.about > div {
+    width: 40%;
+    margin: 10px;
+}
+
+.pic > div {
+    height: 300px;
+    background-image: url(../assets/images/profile.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+.footer {
+    background-color: $main-font-color;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    color: $main-bg-color;
+}
+
+footer > * {
+    width: 20%;
+    justify-content: flex-start;
+    align-content: center;
+    padding: 10px;
+}
+
+footer > h3 {
+    width: 15%;
+}
+
+@media screen and (max-width: 880px){
+    .jumbo > section {
+        justify-content: center;
+        padding: 5px;
+        text-align: center;
+    }
+    .slogan {
+        align-self: center;
+        width: 80%;
+        text-align: center;
+    }
+    .niche {
+        align-self: center;
+        width: 80%;
+    }
+    footer {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    footer > * {
+        width: 80%;
+        align-self: flex-start;
+    }
+}
+
+@media screen and (max-width: 600px){
+    
+    .jumbo {
+        height: fit-content;
+    }
+
+    .slogan {
+        font-size: 18pt;
+        margin: 5px;
+    }
+    .niche {
+        align-self: center;
+        width: 90%;
+        flex-direction: column;
+    }
+    .niche > article {
+        width: 75%;
+        margin-bottom: 10px;
+    }
+    .detailbox {
+        flex-direction: column;
+
+    } 
+    .detailbox > div {
+        width: 80%;
+        align-self: center;
+        margin: 10px;
+        margin-bottom: 40px;
+    }
+    .about {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .about > div {
+        width: 80%;
+    }
+}
